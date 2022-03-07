@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Closure from './closure/Closure';
 import HomeScreen from './homescreen/HomeScreen';
 import OptimizationScreen from './optimizationscreen/OptimizationScreen';
+import ReduxScreen from './reduxscreen/ReduxScreen';
 
 export default function NavigationRouter() {
 

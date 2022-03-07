@@ -1,7 +1,7 @@
 import '../../App.css';
-import React, { useState } from "react";
+import React from "react";
 
-export default function Closure(props) {
+export default function Closure() {
 
     function debounce(delay) {
         console.log("debounce called...");
@@ -16,7 +16,6 @@ export default function Closure(props) {
     };
 
     const search = debounce(3000);
-
 
     function throttling(delay) {
         console.log("throttling called...");

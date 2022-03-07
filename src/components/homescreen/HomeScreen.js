@@ -2,7 +2,7 @@ import '../../App.css';
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-function HomeScreen(props) {
+function HomeScreen() {
     const navigate = useNavigate();
 
     function redirect(to) {

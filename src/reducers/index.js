@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import logSlice from '../slices/logSlice';
+import headerSlice from '../slices/headerSlice';
 
 export default combineReducers({
-    log: logSlice.reducer
+    headerData: headerSlice.reducer
 })

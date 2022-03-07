@@ -1,5 +1,5 @@
 import '../../App.css';
-import React, { useCallback, useMemo, useState, useRef } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import ChildComponent from './ChildComponent';
 
 export default function OptimizationScreen(props) {
@@ -9,18 +9,22 @@ export default function OptimizationScreen(props) {
 
     const calculation = useMemo(() => expensiveCalculation(counter), [counter]);
 
+    // uncomment to see difference with/without useMemo
     // const calculation = expensiveCalculation(counter);
 
+    // comment to see difference with/without useMemo
     const memoizationTestFunc = () => {
         setCounter(++counter);
     }
 
+    // uncomment to see difference useCallback/useCallback useMemo
     // const addTodo = () => {
     //     setTodos((t) => [...t, "New Todo, "]);
     // };
 
+    // comment to see difference useCallback/useCallback useCallback
     const addTodo = useCallback(() => {
-        setTodos((t) => [...t, "New Todo"]);
+        setTodos([...todos, "New Todo"]);
     }, [todos]);
 
     function expensiveCalculation (num) {
