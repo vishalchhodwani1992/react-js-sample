@@ -13,6 +13,7 @@ function HomeScreen(props) {
         <div className="App">
             <header className="App-header">
                 Home Screen
+                <button onClick={() => redirect("/optimization")}>Go to Optimization</button>
                 <button onClick={() => redirect("/closure")}>Go to Closure</button>
             </header>
         </div>

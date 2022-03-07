@@ -3,23 +3,19 @@ import React, { useState } from "react";
 
 export default function Closure(props) {
 
-    let [counter, setCounter] = useState(0);
+    function debounce(delay) {
+        console.log("debounce called...");
 
+        let timeout;
+        return function () {     //anonymous function
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                console.log("API calling...");
+            }, delay);
+        }
+    };
 
-    // function debounce(delay) {
-    //     console.log("debounce called...");
-
-    //     let timeout;
-    //     return function () {     //anonymous function
-    //         clearTimeout(timeout);
-    //         timeout = setTimeout(() => {
-    //             console.log("API calling...");
-    //             setCounter(++counter);
-    //         }, delay);
-    //     }
-    // };
-
-    // const search = debounce(3000);
+    const search = debounce(3000);
 
 
     function throttling(delay) {
@@ -48,9 +44,8 @@ export default function Closure(props) {
         <div className="App">
             <header className="App-header">
                 Debouncing/Throttling and Closure Screen
-                {/* <button onClick={search}>Debounce Test</button> */}
+                <button onClick={search}>Debounce Test</button>
                 <button onClick={throttle}>Throttle Test</button>
-                <span>{counter}</span>
             </header>
         </div>
 
