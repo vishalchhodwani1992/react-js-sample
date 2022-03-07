@@ -3,7 +3,15 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.header-text{
+.header-text-left{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+    margin-left: 10px;
+    font-size: large;
+    color: white;
+}
+.header-text-right{
     margin-top: 0;
     margin-bottom: 0;
     text-align: end;

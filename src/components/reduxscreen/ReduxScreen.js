@@ -1,5 +1,5 @@
 import '../../App.css';
-import React, { useCallback, useMemo } from "react";
+import React from "react";
 
 import { useNavigate } from 'react-router-dom';
 import { updateName, deleteName } from '../../slices/headerSlice'
@@ -28,15 +28,6 @@ export default function ReduxScreen(props) {
             dispatch(updateName(msg));
         }
     }
-
-    const addTodo = useCallback(() => {
-
-    }, []);
-
-    const todos = useMemo(() => {
-
-        return [];
-    }, []);
 
     return (
         <div className="App">

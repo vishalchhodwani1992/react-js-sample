@@ -1,12 +1,22 @@
+import React, { useState } from 'react';
 import './App.css';
 import NavigationRouter from './components/NavigationRouter'
+import MyContext from './utils/MyContext';
 
 function App() {
+  const [language, setLanguage] = useState("english");
 
+  let contextData = {
+    lang: language,
+    changeLanguage: (lang) => setLanguage(lang)
+  }
+  
   return (
-    <div className="App">
-      <NavigationRouter/>
-    </div>
+    <MyContext.Provider value={contextData}>
+      <div className="App">
+        <NavigationRouter />
+      </div>
+    </MyContext.Provider>
   );
 }
 
