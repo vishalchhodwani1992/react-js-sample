@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    show: false
+    name: false
 }
 
 const headerSlice = createSlice({
