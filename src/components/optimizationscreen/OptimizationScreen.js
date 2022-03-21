@@ -8,7 +8,7 @@ export default function OptimizationScreen(props) {
     const [todos, setTodos] = useState([]);
 
     const calculation = useMemo(() => expensiveCalculation(counter), [counter]);
-
+    console.log("calculation==", calculation);
     // uncomment to see difference with/without useMemo
     // const calculation = expensiveCalculation(counter);
 
@@ -24,8 +24,10 @@ export default function OptimizationScreen(props) {
 
     // comment to see difference useCallback/useCallback useCallback
     const addTodo = useCallback(() => {
+        console.log("useCallback called...");
         setTodos([...todos, "New Todo"]);
     }, [todos]);
+    console.log("addTodo==", addTodo);
 
     function expensiveCalculation (num) {
         console.log("Calculating...");
