@@ -17,6 +17,7 @@ function HomeScreen() {
                 <button onClick={() => redirect("/closure")}>Go to Closure</button>
                 <button onClick={() => redirect("/redux")}>Go to Redux</button>
                 <button onClick={() => redirect("/async")}>Go to AsyncScreen</button>
+                <button onClick={() => redirect("/functions")}>Go to FunctionScreen</button>
             </header>
         </div>
     );
